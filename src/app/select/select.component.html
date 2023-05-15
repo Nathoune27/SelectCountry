@@ -1,0 +1,7 @@
+<h1>Pays</h1>
+    <input id="country" type="text" (blur)="onBlur()" (focus)="onFocus()" #input/>
+    <ul *ngIf="curCountries.length > 0">
+        <li *ngFor="let country of curCountries" (click)="selectCountry($event)">
+        {{ country.libelle }}
+        </li>
+    </ul>
